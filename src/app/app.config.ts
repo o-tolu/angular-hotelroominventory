@@ -10,3 +10,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), provideClientHydration(withEventReplay())
   ]
 };
+
+/*
+  The `appConfig` object is an instance of `ApplicationConfig` that defines the configuration for the Angular application. 
+  It includes providers for global error listeners, - "Listen for unexpected errors occurring in the browser."
+  routing, and - Angular takes your routes and activates navigation.
+  client hydration with event replay. - "Hydrate the application on the client side, replaying any events that occurred during server-side rendering."
+*/

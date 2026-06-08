@@ -1,17 +1,21 @@
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+
+//This config extends tsconfig.json and is used for compiling your main application code.
+
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
+    "outDir": "./out-tsc/app", //compiled app output goes here.
+    "rootDir": "./src", //source root for app compilation.
     "types": [
       "node"
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts" //compile all TypeScript files under src.
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts" //do not compile test files in the app build.
   ]
 }

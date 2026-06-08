@@ -1,19 +1,28 @@
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+
+/*
+tsconfig.json is the root TypeScript configuration for your Angular workspace.
+It defines shared compiler settings and tells TypeScript how to handle the project overall, 
+while delegating actual application and test compilation to the referenced config files:
+tsconfig.app.json
+tsconfig.spec.json
+*/
+
 {
   "compileOnSave": false,
-  "compilerOptions": {
-    "strict": true,
+  "compilerOptions": { //contains common TypeScript options used across the workspace.
+    "strict": true, //enables strict type checking
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true, //tighten checks for function returns and switch statements
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true, //speeds up compilation by skipping type checking of declaration files
     "isolatedModules": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true, //enables support for decorators, which are used in Angular for things like components and services
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve" //preserves ES module syntax for downstream build tooling
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
